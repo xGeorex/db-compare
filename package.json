@@ -1,0 +1,41 @@
+{
+	"name": "database-compersion",
+	"windowtitle": "Database comparing",
+	"version": "1.1.0",
+	"description": "Two database compersion by parameters",
+	"main": "main.js",
+	"scripts": {
+		"start": "electron .",
+		"app:dir": "electron-builder --dir",
+		"app:dist": "electron-builder"
+	},
+	"keywords": [
+		"database",
+		"comparsion",
+		"Data comparsion"
+	],
+	"author": "Gyorgy Jezerniczky <jezerniczky.gy@gmail.com>",
+	"license": "ISC",
+	"devDependencies": {
+		"electron": "^17.1.0",
+		"electron-builder": "^23.0.3"
+	},
+	"dependencies": {
+		"mysql2": "^2.3.3"
+	},
+	"build": {
+		"appId": "https://github.com/gyorgy-forwardvaping",
+		"linux": {
+			"target": [
+				"deb"
+			],
+			"category": "Utility"
+		},
+		"win": {
+			"target": [
+				"nsis"
+			]
+		}
+	},
+	"repository": "git@github.com:gyorgy-forwardvaping/database-comparsion.git"
+}

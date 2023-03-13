@@ -1,0 +1,305 @@
+.section .tabs {
+	margin-bottom: 0;
+	padding-left: 1.25rem;
+	padding-right: 1.25rem;
+}
+
+.connection-grid {
+	height: 554px;
+	width: 100%;
+	padding: 1.25rem;
+	display: grid;
+	grid-template-columns: 200px auto;
+	grid-auto-rows: auto;
+}
+
+#connectionList>tr>td:hover {
+	cursor: pointer;
+}
+
+.symbol {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		background: #333;
+		color: white;
+	}
+
+	.container>.section>.box {
+		background: #555;
+		color: white;
+		box-shadow: 0px 1px 5px 1px #aaa;
+	}
+
+	.modal>.modal-card {
+		box-shadow: 0px 1px 5px 1px #aaa;
+	}
+
+	.modal>.modal-card>.modal-card-head,
+	.modal>.modal-card>.modal-card-foot {
+		background: #212121;
+	}
+
+	.modal>.modal-card>.modal-card-head>.modal-card-title {
+		color: #aaa;
+	}
+
+	.modal>.modal-card>.modal-card-body {
+		background: #555;
+	}
+
+	input[type="text"].input,
+	input[type="password"].input {
+		background-color: #212121;
+		color: white;
+	}
+
+	.field>label.label {
+		color: #aaa;
+	}
+
+	div>button.button.is-light,
+	p>button.button.is-light {
+		background-color: #363636;
+		border-color: transparent;
+		color: #fff;
+	}
+
+	div>button.button.is-light[disabled],
+	p>button.button.is-light[disabled] {
+		background-color: dimgrey;
+		border-color: transparent;
+		box-shadow: none;
+	}
+
+	div>button.button.is-light:hover,
+	p>button.button.is-light:hover,
+	div>button.button.is-light.is-hovered,
+	p>button.button.is-light.is-hoverd {
+		background-color: #363636;
+		border-color: transparent;
+		color: #fff;
+	}
+
+	.tabs li.is-active>a {
+		border-bottom-color: #222;
+		background-color: #ddd;
+		color: black;
+		border-radius: 5px 5px 0 0;
+	}
+
+	.tabs li>a {
+		background-color: #222;
+		color: #888;
+		border-radius: 5px 5px 0 0;
+	}
+
+	.connection-list {
+		background-color: #313131;
+	}
+
+	.connection-list>.table {
+		width: 100%;
+	}
+
+	.connection-list>.table thead tr th {
+		border-width: 0 0 2px;
+		color: #dfdfdf;
+		background-color: #212121;
+	}
+
+	#connectionList tr td,
+	#connectionList tr th {
+		/* border: 1px solid #444; */
+		background-color: #28282f;
+		color: #dfdfdf;
+	}
+
+	#connectionList tr td.is-active {
+		background-color: #5f5f6e;
+		color: #dfdfdf;
+	}
+
+	.grid-item-2 {
+		padding: 9px;
+		border-left: solid 1px #888;
+	}
+
+	.grid-item-1,
+	.grid-item-2 {
+		background-color: #3f3f3f;
+	}
+
+	.delete-container {
+		color: #ddd;
+	}
+
+	.delete-container .conName {
+		color: #ddd;
+	}
+
+
+	.custom-checkbox {
+		display: inline-block;
+		position: relative;
+		padding-left: 20px;
+		padding-right: 1rem;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.custom-checkbox #deleteConnectCheckbox {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	.custom-checkbox .checkbox-mark {
+		position: absolute;
+		top: 4px;
+		left: 0;
+		height: 1rem;
+		width: 1rem;
+		background-color: #313131;
+		border-radius: 5px;
+	}
+
+	.custom-checkbox:hover #deleteConnectCheckbox~.checkbox-mark {
+		background-color: #383838;
+	}
+
+	.custom-checkbox #deleteConnectCheckbox:checked~.checkbox-mark {
+		background-color: #313131;
+	}
+
+	.custom-checkbox .checkbox-mark:after {
+		content: "";
+		position: absolute;
+		display: none;
+
+		left: 0px;
+		top: 0px;
+		width: 16px;
+		height: 16px;
+		border: solid #386a94;
+		background-color: #3e8ed0;
+		border-width: 1px;
+		border-radius: 5px;
+		box-shadow: 1px 1px 5px 0px #212121;
+	}
+
+	.custom-checkbox #deleteConnectCheckbox:checked~.checkbox-mark:after {
+		display: block;
+	}
+
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		background: #ddd;
+		color: black;
+	}
+
+	.grid-item-2 {
+		padding: 9px;
+		border-left: solid 1px #888;
+	}
+
+	.tabs li>a {
+		border-bottom-color: #666;
+		background-color: #999;
+		color: #555;
+		border-radius: 5px 5px 0 0;
+	}
+
+	.tabs li.is-active>a {
+		background-color: #eee;
+		border-bottom-color: #888;
+		color: #363636;
+		border-radius: 5px 5px 0 0;
+	}
+
+	.tabs ul {
+		border-bottom-color: #888;
+	}
+
+	#connectionList tr td.is-active {
+		background-color: #363636;
+		color: #eee;
+	}
+
+	.container>.section>.box {
+		box-shadow: 0px 1px 5px 1px;
+	}
+
+	.modal>.modal-card {
+		box-shadow: 0px 1px 5px 1px;
+	}
+
+	.custom-checkbox {
+		display: inline-block;
+		position: relative;
+		padding-left: 20px;
+		padding-right: 1rem;
+		cursor: pointer;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+
+	.custom-checkbox #deleteConnectCheckbox {
+		position: absolute;
+		opacity: 0;
+		cursor: pointer;
+		height: 0;
+		width: 0;
+	}
+
+	.custom-checkbox .checkbox-mark {
+		position: absolute;
+		top: 4px;
+		left: 0;
+		height: 1rem;
+		width: 1rem;
+		background-color: #313131;
+		border-radius: 5px;
+	}
+
+	.custom-checkbox:hover #deleteConnectCheckbox~.checkbox-mark {
+		background-color: #383838;
+	}
+
+	.custom-checkbox #deleteConnectCheckbox:checked~.checkbox-mark {
+		background-color: #313131;
+	}
+
+	.custom-checkbox .checkbox-mark:after {
+		content: "";
+		position: absolute;
+		display: none;
+
+		left: 0px;
+		top: 0px;
+		width: 16px;
+		height: 16px;
+		border: solid #386a94;
+		background-color: #3e8ed0;
+		border-width: 1px;
+		border-radius: 5px;
+		box-shadow: 1px 1px 5px 0px #212121;
+	}
+
+	.custom-checkbox #deleteConnectCheckbox:checked~.checkbox-mark:after {
+		display: block;
+	}
+
+}

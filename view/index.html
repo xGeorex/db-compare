@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<title>Database compare</title>
+</head>
+
+<body>
+	<div class="">
+		<section class="section pt-3 px-3">
+			<div class="box">
+				<div class="columns connectors">
+					<div class="column connector c1 has-text-left is-4">
+						<div>
+							<button type="button" class="button main" id="connect1" name="button1"><span
+									class="symbol"><i class="fa-solid fa-database"></i></span> Main
+								database</button>
+						</div>
+						<div>
+							<span id="db1"> - </span>
+						</div>
+					</div>
+					<div class="column is-4 has-text-centered">
+						<div class="field">
+							<div class="control">
+								<label class="custom-radio">
+									Structure
+									<input type="radio" value="structure" name="compareType"
+										class="compareType compareStructure" checked disabled>
+									<span class="radio-mark"></span>
+								</label>
+								<label class="custom-radio">
+									Data
+									<input type="radio" value="data" name="compareType" class="compareType compareData"
+										disabled>
+									<span class="radio-mark"></span>
+								</label>
+							</div>
+						</div>
+						<div class="field">
+							<button type="button" class="button action is-fullwidth" id="compare" disabled><span
+									class="symbol"><i class="fa-solid fa-code-compare"></i></span></button>
+						</div>
+					</div>
+					<div class="column connector c2 has-text-right is-4">
+						<div>
+							<button type="button" class="button main" id="connect2" name="button2" disabled><span
+									class="symbol"><i class="fa-solid fa-database"></i></span> Secondary
+								Database</button>
+						</div>
+						<div>
+							<span id="db2"> - </span>
+						</div>
+					</div>
+				</div>
+
+				<div class="columns is-centered">
+					<div class="column is-centered">
+						<div class="navigation-wrapper ">
+							<div class="field has-addons">
+								<p class="control">
+									<button data-action="showAll" class="navButton button action" disabled>
+										<span>Show All</span>
+									</button>
+								</p>
+								<p class="control">
+									<button data-action="showDiff" class="navButton  button action" disabled>
+										<span>Show Differences</span>
+									</button>
+								</p>
+								<p class="control">
+									<button data-action="showOrphan" class="navButton  button action" disabled>
+										<span>Show Orphans</span>
+									</button>
+								</p>
+								<p class="control">
+									<button data-action="showEq" class="navButton button action" disabled>
+										<span>Show Equals</span>
+									</button>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="columns">
+					<div class="column">
+						<div class="wrapper" id="wrapper">
+						</div>
+					</div>
+				</div>
+
+
+				<div class="columns">
+					<div class="column resultContainer">
+						<span id="result">
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+	<div class="modal" id="connection1Modal">
+		<div class="modal-background"></div>
+		<div class="modal-card">
+			<header class="modal-card-head">
+				<p class="modal-card-title">Database Connect</p>
+			</header>
+			<section class="modal-card-body">
+				<input type="hidden" id="_" value="">
+				<div class="container">
+					<div class="field" id="database_select">
+						<label class="label">Saved Databases</label>
+						<div class="select is-fullwidth">
+							<select id="databases">
+								<option value=''>-Select saved connection-</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="field">
+						<label class="label">Connection name</label>
+						<div class="control">
+							<input class="input" id="db_name" type="text" name="db_name" placeholder="Connection name">
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Host</label>
+						<div class="control">
+							<input class="input" id="db_host" type="text" name="db_host" placeholder="Database Host">
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Username</label>
+						<div class="control">
+							<input class="input" id="db_username" type="text" name="db_username"
+								placeholder="Database User">
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Password</label>
+						<div class="control">
+							<input class="input" id="db_pw" type="password" name="db_pw" placeholder="User Password">
+						</div>
+					</div>
+					<div class="field">
+						<label class="label">Database</label>
+						<div class="control">
+							<input class="input" id="db_db" type="text" name="db_db" placeholder="Selected Database">
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer class="modal-card-foot">
+				<button class="button action" id="connection1ModalConnect">Connect</button>
+				<button class="button neutral" id="connection1ModalClose">Cancel</button>
+			</footer>
+		</div>
+	</div>
+
+	<div class="modal" id="loadingModal">
+		<div class="modal-background"></div>
+		<div class="modal-content">
+			<p class="image is-96x96 has-text-centered">
+				<img src="../images/loading.gif" alt="">
+			</p>
+		</div>
+	</div>
+	<script src="../controller/renderer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+	<link rel="stylesheet" type="text/css" href="../css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/settings.css">
+	<link rel="stylesheet" type="text/css" href="../css/bulma.css">
+	<link rel="stylesheet" type="text/css" href="../css/buttons.css">
+	<title></title>
+</head>
+
+<body>
+	<div class="container">
+		<section class="section py-3 px-3">
+			<div class="field">
+				<label class="label">Theme</label>
+				<div class="control">
+					<button class="button action" id="toggle-dark-mode">
+						<span class="symbol"><i class="fa-solid fa-moon"></i></span>
+						<span>Dark</span>
+					</button>
+					<button class="button neutral" id="reset-to-system">
+						<span class="symbol"><i class="fa-solid fa-arrows-rotate"></i></span>
+						<span>Reset</span>
+					</button>
+				</div>
+			</div>
+			<div class="field">
+				<label class="label">Clear all connection</label>
+				<div class="control">
+					<button class="button danger" id="clear-connect">Clear connections</button>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<script src="../controller/settings-renderer.js"></script>
+</body>
+
+</html>

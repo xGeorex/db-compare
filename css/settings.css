@@ -1,0 +1,196 @@
+@media (prefers-color-scheme: dark) {
+	:root {
+		background: #333;
+		color: white;
+	}
+
+	.box {
+		background: #555;
+		color: white;
+		box-shadow: 0px 1px 5px 1px #aaa;
+	}
+
+	.modal>.modal-card {
+		box-shadow: 0px 1px 5px 1px #aaa;
+	}
+
+	.modal>.modal-card>.modal-card-head,
+	.modal>.modal-card>.modal-card-foot {
+		background: #212121;
+
+	}
+
+	.modal>.modal-card>.modal-card-head>.modal-card-title {
+		color: #aaa;
+	}
+
+	.modal>.modal-card>.modal-card-body {
+		background: #555;
+	}
+
+	input[type="text"].input,
+	input[type="password"].input {
+		background-color: #212121;
+		color: white;
+	}
+
+	.field>label.label {
+		color: #aaa;
+	}
+
+	div>button.button.is-light,
+	p>button.button.is-light {
+		background-color: #363636;
+		border-color: transparent;
+		color: #fff;
+	}
+
+	div>button.button.is-light[disabled],
+	p>button.button.is-light[disabled] {
+		background-color: dimgrey;
+		border-color: transparent;
+		box-shadow: none;
+	}
+
+	div>button.button.is-light:hover,
+	p>button.button.is-light:hover,
+	div>button.button.is-light.is-hovered,
+	p>button.button.is-light.is-hoverd {
+		background-color: #363636;
+		border-color: transparent;
+		color: #fff;
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		background: #ddd;
+		color: black;
+	}
+}
+
+#table1 {
+	overflow: scroll;
+	height: 400px;
+	width: 400px;
+}
+
+#table2 {
+	overflow: scroll;
+	height: 400px;
+	width: 400px;
+}
+
+#result {
+	overflow: scroll;
+	height: 300px;
+	width: 100%;
+
+}
+
+#db1,
+#db2 {
+	font-weight: bold;
+}
+
+.columns>.wrapper {
+	height: 600px;
+	overflow-y: scroll;
+	width: 100%;
+	padding: 1.25rem;
+	display: grid;
+	grid-template-columns: 40px auto 40px auto;
+	grid-auto-rows: auto;
+}
+
+.table-result-grid {
+	display: grid;
+	grid-template-columns: auto 50px;
+	grid-auto-rows: auto;
+}
+
+.table-result-grid>.grid-item1,
+.table-result-grid>.grid-item2 {
+	height: fit-content;
+}
+
+.grid-wrapper {
+	display: grid;
+	grid-template-columns: auto 600px;
+	grid-auto-rows: auto;
+}
+
+.grid-wrapper>.grid-item1,
+.grid-wrapper>.grid-item2 {
+	height: fit-content;
+}
+
+.columns>.wrapper>.grid-item1,
+.columns>.wrapper>.grid-item2 {
+	height: fit-content;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+#loadingModal>.modal-content {
+	width: auto;
+}
+
+.icon>img {
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.columns>.column>.navigation-wrapper>.field.has-addons {
+	justify-content: center;
+}
+
+.imageHolder>img {
+	width: 1rem;
+	height: 1rem;
+}
+
+.up-arrow {
+	transition: all 0.3s ease;
+	transform: rotate(0deg);
+}
+
+.expandable>.resultTitle {
+	width: 100%;
+}
+
+.down-arrow {
+	transition: all 0.3s ease;
+	transform: rotate(180deg);
+}
+
+.sqlText {
+	margin: 0;
+	padding: 0;
+}
+
+.sqlText.closed {
+	max-height: 0px;
+	transition: max-height 0.15s ease-out;
+	overflow: hidden;
+}
+
+.sqlText.closed>pre {
+	display: none;
+	transition: display 0.25s ease-in;
+}
+
+.sqlText.open {
+	max-height: 500px;
+	transition: max-height 0.25s ease-in;
+	overflow-y: scroll;
+}
+
+.columns>.column.resultContainer {
+	width: 100%;
+}
+
+.symbol {
+	margin-left: 4px;
+	margin-right: 4px;
+}

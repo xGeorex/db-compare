@@ -1,0 +1,201 @@
+@media (prefers-color-scheme: dark) {
+
+    .main,
+    .main:active,
+    .main.is-active {
+        background-color: #3e8ed0;
+        border-color: transparent;
+        color: #fff;
+        opacity: 0.8;
+        box-shadow: 2px 2px 5px 0px #212121;
+    }
+
+    .main:hover,
+    .main:focus {
+        background-color: #3488ce;
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 1px 1px 3px 0px #212121;
+    }
+
+    .main[disabled] {
+        background-color: #3e8ed0;
+        border-color: transparent;
+        border-color: #3e8ed0;
+        box-shadow: 1px 1px 3px 0px #212121;
+    }
+
+    .action,
+    .action:active,
+    .action.is-active {
+        background-color: #485fc7;
+        border-color: transparent;
+        color: #fff;
+        opacity: 0.8;
+        box-shadow: 2px 2px 5px 0px #212121;
+    }
+
+    .action:hover,
+    .action:focus {
+        background-color: #3e56c4;
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 1px 1px 3px 0px #212121;
+    }
+
+    .action[disabled] {
+        background-color: #485fc7;
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 1px 1px 3px 0px #212121;
+    }
+
+    .danger,
+    .danger:active,
+    .danger.is-active {
+        background-color: #f14668;
+        border-color: transparent;
+        color: #fff;
+        opacity: 0.8;
+        box-shadow: 2px 2px 5px 0px #212121;
+    }
+
+    .danger:hover,
+    .danger:focus {
+        background-color: #f03a5f;
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 1px 1px 3px 0px #212121;
+    }
+
+    .danger[disabled] {
+        background-color: #f14668;
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 1px 1px 3px 0px #212121;
+    }
+
+    .neutral,
+    .neutral:active,
+    .neutral.is-active {
+        background-color: #363636;
+        border-color: transparent;
+        color: #fff;
+        opacity: 0.8;
+        box-shadow: 2px 2px 5px 0px #212121;
+    }
+
+    .neutral:hover,
+    .neutral:focus {
+        background-color: #2f2f2f;
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 1px 1px 3px 0px #212121;
+    }
+
+    .neutral[disabled] {
+        background-color: #363636;
+        border-color: transparent;
+        color: #fff;
+        box-shadow: 1px 1px 3px 0px #212121;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    .main,
+    .main:active,
+    .main.is-active {
+        background-color: #eff5fb;
+        color: #296fa8;
+        border-color: transparent;
+        box-shadow: 2px 2px 5px 0px;
+    }
+
+    .main:hover,
+    .main:focus {
+        background-color: #e4eff9;
+        border-color: transparent;
+        color: #296fa8;
+        box-shadow: 1px 1px 3px 0px;
+    }
+
+    .main[disabled] {
+        background-color: #eff5fb;
+        color: #296fa8;
+        border-color: transparent;
+        box-shadow: 1px 1px 3px 0px;
+    }
+
+    .action,
+    .action:active,
+    .action.is-active {
+        border-color: transparent;
+        background-color: #eff1fa;
+        color: #3850b7;
+        box-shadow: 2px 2px 5px 0px;
+    }
+
+    .action:hover,
+    .action:focus {
+        background-color: #e6e9f7;
+        border-color: transparent;
+        color: #3850b7;
+        box-shadow: 1px 1px 3px 0px;
+    }
+
+    .action[disabled] {
+        border-color: transparent;
+        background-color: #eff1fa;
+        color: #3850b7;
+        box-shadow: 1px 1px 3px 0px;
+    }
+
+    .danger,
+    .danger:active,
+    .danger.is-active {
+        border-color: transparent;
+        background-color: #feecf0;
+        color: #cc0f35;
+        box-shadow: 2px 2px 5px 0px;
+    }
+
+    .danger:hover,
+    .danger:focus {
+        background-color: #fde0e6;
+        border-color: transparent;
+        color: #cc0f35;
+        box-shadow: 1px 1px 3px 0px;
+    }
+
+    .danger[disabled] {
+        border-color: transparent;
+        background-color: #feecf0;
+        color: #cc0f35;
+        box-shadow: 1px 1px 3px 0px;
+    }
+
+    .neutral,
+    .neutral:active,
+    .neutral.is-active {
+        background-color: #f5f5f5;
+        border-color: transparent;
+        color: rgba(0, 0, 0, .7);
+        box-shadow: 2px 2px 5px 0px;
+    }
+
+    .neutral:hover,
+    .neutral:focus {
+        background-color: #eee;
+        border-color: transparent;
+        color: rgba(0, 0, 0, .7);
+        box-shadow: 1px 1px 3px 0px;
+    }
+
+    .neutral[disabled] {
+        background-color: #f5f5f5;
+        border-color: transparent;
+        color: rgba(0, 0, 0, .7);
+        box-shadow: 1px 1px 3px 0px;
+    }
+}
